@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSAV</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     
 
     <header>
 
-        
             <img src="images/logoosav-removebg-preview.png" alt="">
     
         <ul>
@@ -29,8 +29,8 @@
 
         <h1> OSAV - Conectando Negócios ao Mundo Digital</h1>
         <br>
-        <p>A OSAV (Open Sites for All Vendas) é a sua parceira ideal 
-            para transformar a presença digital do seu negócio</p>
+      <!--  <p>A OSAV (Open Sites for All Vendas) é a sua parceira ideal 
+            para transformar a presença digital do seu negócio</p> -->
 
             <input type="button" value="CONHECER" id="btnConhecer">
 
@@ -67,6 +67,103 @@
             </div>
         </div>
         
+
+
+    </div>
+
+    <div id="terceira_secao">
+
+
+        <h2>Por Que Escolher a OSAV?</h2>
+        <h3>Soluções Personalizadas para o Seu Negócio</h3>
+        <p>Na OSAV, oferecemos serviços de desenvolvimento de sites sob medida, focados em atender às necessidades específicas de cada cliente e potencializar os resultados online de forma eficaz e profissional.</p>
+        <input type="button" value="Solicitar orçamento" id="btnContatoOrcamento">
+    </div>
+
+    <div id="secao_projetos">
+
+        <nav>
+            <h2>Nossos Últimos Trabalhos</h2>
+            <p>O próximo pode ser o seu!</p>
+        </nav>
+
+        <div id="projetos">
+
+            <div class="card_projeto">
+                <img src="projeto1.jpg" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do Projeto 1.</p>
+            </div>
+            <div class="card_projeto">
+                <img src="projeto2.jpg" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do Projeto 2.</p>
+            </div>
+            <div class="card_projeto">
+                <img src="projeto3.jpg" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do Projeto 3.</p>
+            </div>
+            <div class="card_projeto">
+                <img src="projeto4.jpg" alt="Projeto 4">
+                <h3>Projeto 4</h3>
+                <p>Descrição breve do Projeto 4.</p>
+            </div>
+            <div class="card_projeto">
+                <img src="projeto5.jpg" alt="Projeto 5">
+                <h3>Projeto 5</h3>
+                <p>Descrição breve do Projeto 5.</p>
+            </div>
+            <div class="card_projeto">
+                <img src="projeto6.jpg" alt="Projeto 6">
+                <h3>Projeto 6</h3>
+                <p>Descrição breve do Projeto 6.</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="secao_contato">
+        <h2>Entre em Contato</h2>
+        <p>Tem alguma dúvida ou quer discutir um projeto? Estamos aqui para ajudar!</p>
+    
+        <form action="/enviar-contato" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" name="modelodesite" placeholder="Modelo de Site (Institucional/E-commerce/Blog...)" required>
+            <input type="text" name="area_atuacao" placeholder="Área de Atuação" required>
+            <input type="tel" name="telefone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+            <input type="text" name="prazodeentrega" placeholder="Prazo de Entrega Estimada">
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+        </form>
+        
+    </div>
+    
+    <div id="time">
+
+        <div class="pessoa_time">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="pessoa_time">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="pessoa_time">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="pessoa_time">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="pessoa_time">
+            <img src="" alt="">
+            <p></p>
+        </div>
 
 
     </div>
