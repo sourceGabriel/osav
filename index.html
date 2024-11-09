@@ -10,22 +10,33 @@
 <body>
     
 
-    <header>
+    
+
+
+
+    <main id="secaoprincipal">
+
+
+        <header>
 
             <img src="images/logoosav-removebg-preview.png" alt="">
     
         <ul>
-            <li>Início</li>
-            <li>Serviços</li>
-            <li>Nosso Time</li>
-            <li>Contatos</li>
+            <a href="#secaoprincipal">
+                <li>Início</li>
+            </a>
+            <a href="#segundasecao">
+                <li>Serviços</li>
+            </a>
+            <a href="#formulario">
+                <li>Contatos</li>
+            </a>
+            <a href="#time">
+                <li>Time</li>
+            </a>
         </ul>
 
-    </header>
-
-
-
-    <main>
+    </header> 
 
         <h1> OSAV - Conectando Negócios ao Mundo Digital</h1>
         <br>
@@ -80,7 +91,7 @@
         <input type="button" value="Solicitar orçamento" id="btnContatoOrcamento">
     </div>
 
-    <div id="secao_projetos">
+   <!-- <div id="secao_projetos">
 
         <nav>
             <h2>Nossos Últimos Trabalhos</h2>
@@ -123,24 +134,65 @@
 
 
         </div>
-    </div>
+    </div> -->
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Benefícios dos Nossos Projetos</h2>
+            <p>Descubra como os projetos desenvolvidos pela nossa equipe podem transformar o seu negócio, oferecendo soluções inovadoras e eficazes.</p>
+            
+            <div class="benefit-cards">
+                <div class="benefit-item">
+                    <div class="icon"><img src="images/eficiencia_icone.png" alt="Eficiência"></div>
+                    <h3>Maior Eficiência</h3>
+                    <p>Aumente a produtividade da sua equipe com ferramentas mais eficientes e processos otimizados.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="icon"><img src="images/crescimento_icone.png" alt="Crescimento"></div>
+                    <h3>Crescimento Acelerado</h3>
+                    <p>Impulsione o crescimento da sua empresa com soluções que aumentam a performance e a competitividade.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="icon"><img src="images/experienciadocliente_icone.png" alt="Experiência do Cliente"></div>
+                    <h3>Melhoria da Experiência do Cliente</h3>
+                    <p>Proporcione uma experiência mais agradável e eficiente para os seus clientes, aumentando a fidelização.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
+
 
     <div id="secao_contato">
-        <h2>Entre em Contato</h2>
-        <p>Tem alguma dúvida ou quer discutir um projeto? Estamos aqui para ajudar!</p>
-    
-        <form action="/enviar-contato" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <input type="text" name="modelodesite" placeholder="Modelo de Site (Institucional/E-commerce/Blog...)" required>
-            <input type="text" name="area_atuacao" placeholder="Área de Atuação" required>
-            <input type="tel" name="telefone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
-            <input type="text" name="prazodeentrega" placeholder="Prazo de Entrega Estimada">
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-            <button type="submit" id="btnEnviar">Enviar Mensagem</button>
-        </form>
+
+
+        <div id="formulario">
+
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida ou quer discutir um projeto? <br> Estamos aqui para ajudar!</p>
         
+            <form action="/enviar-contato" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="text" name="modelodesite" placeholder="Modelo de Site (Institucional/E-commerce/Blog...)" required>
+                <input type="text" name="area_atuacao" placeholder="Área de Atuação" required>
+                <input type="tel" name="telefone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+                <input type="text" name="prazodeentrega" placeholder="Prazo de Entrega Estimada">
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+            </form>
+
+        </div>
+
+        <div id="secao_img">
+            <img src="images/fotocontato.jpg" alt="">
+        </div>
     </div>
+
 
     
     
@@ -152,29 +204,38 @@
                 <p>Luis Eduardo Leoni Gisoldi
                 </p>
                 <p class="funcao">Modelagem de BDD</p>
+                <p class="linkedin"> Meu Linkedin</p>
             </div>
             <div class="pessoa_time">
                 <img src="images/GabiFoto.jpeg" alt="">
                 <p>Gabriella Martins R da Fonte
                 </p>
-                <p class="funcao">Desenvolvimento da API e ChatBot</p>
+                <p class="funcao">Desenv. da API e ChatBot</p>
+                <p class="linkedin">Meu Linkedin</p>
+
             </div>
             <div class="pessoa_time">
                 <img src="images/CleberFoto.jpeg" alt="">
                 <p>Cleber Eduardo Y Brolezi Reis
                 </p>
-                <p class="funcao">Desenvolvimento do Wireframe</p>
+                <p class="funcao">Desenv. do Wireframe</p>
+                <p class="linkedin">Linkedin</p>
+
             </div>
             <div class="pessoa_time">
                 <img src="images/IsaFoto.jpeg" alt="">
-                <p>Isabelli Bica Manso dos Santos
+                <p>Isabelli Bica Manso
                 </p>
-                <p class="funcao">Teste de Funcionalidades/Validação</p>
+                <p class="funcao">Teste de Funcionalidades</p>
+                <p class="linkedin">Meu Linkedin</p>
+
             </div>
             <div class="pessoa_time">
                 <img src="images/SoFoto.jpeg" alt="">
                 <p>Soraia Gonçalves Siquelli</p>
                 <p class="funcao">Desenvolvimento Front-End</p>
+                <p class="linkedin">Meu Linkedin</p>
+
 
             </div>
         </div>
