@@ -200,14 +200,17 @@ main > p{
 }
 
 #terceira_secao {
-    /*background-color: #f5f5f5;  *//* Fundo leve para destacar o texto */
-    background-image: url(images/teste.jpg);
+    background-image: url(images/124643.jpg);
+    background-position: center center; /* Centraliza a imagem */
+    background-size: cover; /* A imagem cobre todo o elemento sem distorcer */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
     padding: 40px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 5%;
 }
+
 
 #terceira_secao h2 {
     font-size: 2em;
@@ -261,18 +264,18 @@ main > p{
     text-align: center;
     border: 1px solid #ccc; /* Borda mais suave */
     border-radius: 8px; /* Bordas arredondadas */
-    width: 80%;
-    height: 80vh;
+    width: 90%;
+    height: 60vh;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 20px var(--roxo);/* Brilho amarelo suave */
+   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 20px var(--roxo);*/
     transition: box-shadow 0.3s; /* Transição suave para o brilho */
 }
 
 /* Adicionando um efeito de brilho ao passar o mouse */
 #secao_projetos:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 255, 0, 0.8); /* Aumenta o brilho ao hover */
+  /*  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 255, 0, 0.8);*/ 
 }
 
 
@@ -330,6 +333,7 @@ nav p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao hover */
 }
 
+
 /*Formulario*/
 
 #secao_contato {
@@ -356,70 +360,98 @@ nav p {
 
 form {
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     font-size: 1em;
     color: #333;
-    
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
 }
 
 form input {
-    width: 80%;
-    border-radius: none !important;
     border: none;
-    border-bottom: 1px solid grey;
-    margin-top: 10px;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    margin-top: 15px;
+    font-size: 1em;
 }
 
-form textarea {
-    width: 80%;
-}
 form input:focus, form textarea:focus {
     outline: none;
     border-color: #007bff; /* Cor ao focar */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    background-color: #fff;
 }
 
 form textarea {
     height: 150px;
     resize: vertical; /* Permite redimensionar a altura do textarea */
+    padding: 14px;
+    font-size: 1em;
 }
 
 form button {
-    background: linear-gradient(90deg, rgba(220,63,128,1) 16%, rgba(243,178,42,1) 66%);
-    color: #fff;
-    padding: 15px 30px;
+    background: linear-gradient(90deg, #dc3f80 16%, #f3b22a 66%);
+    color: #ffffff;
+    padding: 15px 40px;
     font-size: 1.1em;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
+
+form button:hover {
+    background: linear-gradient(90deg, #f3b22a 16%, #dc3f80 66%);
+    box-shadow: 0 4px 10px rgba(220, 63, 128, 0.4);
+    transform: translateY(-3px);
+}
+
+form button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
 
 #btnEnviar:hover{
     background: linear-gradient(90deg, rgba(243,178,42,1) 21%, rgba(220,63,128,1) 73%);
     transform: scale(1.05); /* Leve aumento no tamanho */
+}
+#secao_time{
+    width: 100%;
+    height: 65vh;
+}
+
+#secao_time > h2{
+    padding: 30px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-align: center;
 }
 /*Time*/
 #time {
     display: grid; /* Usando grid para organizar os cards */
     grid-template-columns: repeat(5, 1fr); /* 5 colunas de tamanho igual */
     gap: 20px; /* Espaçamento entre os cards */
-    width: 100%; /* Ocupa 100% da largura disponível */
+    width: 80%; /* Ocupa 100% da largura disponível */
     padding: 20px; /* Espaçamento interno */
     background-color: #f5f5f5; /* Fundo suave para a seção */
     border-radius: 8px; /* Bordas arredondadas para a seção */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve na seção */
+    margin: auto;
 }
 
 .pessoa_time { 
@@ -428,7 +460,7 @@ form button {
     flex-direction: column;
     align-items: center; /* Alinha a imagem e o texto no centro */
     justify-content: flex-start; /* Centraliza os itens */
-    height: 300px; /* Altura fixa para os cards */
+    height: 350px; /* Altura fixa para os cards */
     width: 100%; /* Largura do card */
     box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho */
     padding: 10px; /* Espaçamento interno */
@@ -473,3 +505,80 @@ form button {
     transition: color 0.3s; /* Transição suave para a mudança de cor */
 }
 
+p.funcao{
+    font-weight: bold;
+
+}
+#mapa {
+    width: 100%;
+    height: 500px;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    color: #aaaaaa;
+  }
+  
+  .footer-social {
+    margin-top: 20px;
+  }
+  
+  .footer-social a {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    color: #aaaaaa;
+  }
+  
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaaaaa;
+  }
