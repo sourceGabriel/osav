@@ -347,7 +347,8 @@ nav p {
 #secao_contato {
     background-color: #f9f9f9; /* Cor de fundo suave */
     display: grid; /* Usando grid para organizar os cards */
-    grid-template-columns: repeat(2, 1fr); /* 5 colunas de tamanho igual */    padding: 60px 20px;
+    grid-template-columns: repeat(2, 1fr); /* 5 colunas de tamanho igual */   
+     padding: 0px 20px;
     text-align: center;
     border-radius: 10px;
     margin-top: 5%;
@@ -462,9 +463,13 @@ form button:active {
 }
 #secao_time{
     width: 100%;
-    height: 100vh;
+    height: 120%;
+    padding-bottom: 2%;
     background-image: url(8478.jpg);
     color:white !important;
+    background-position: center center;  /* Centraliza a imagem na div */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
+    background-size: cover;  /* Faz a imagem cobrir toda a área da div, mantendo a proporção */
 }
 
 #secao_time > h2{

@@ -1,0 +1,211 @@
+/* responsivo.css */
+
+/* Definições gerais para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%; /* Ajusta o tamanho da fonte */
+    }
+
+    header {
+        flex-direction: column; /* Empilha os elementos no header */
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        display: none;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    main {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        color: white;  /* Garante que o texto dentro de main seja branco */
+    }
+    
+    /* Camada de escurecimento da imagem de fundo */
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);  /* Escurece a imagem de fundo com 50% de opacidade */
+        z-index: 0;  /* A camada de escurecimento fica atrás do conteúdo */
+    }
+    
+    /* Estilo para garantir que o conteúdo dentro de main esteja acima da camada escura */
+    main > * {
+        position: relative;
+        z-index: 1;  
+    }
+    h1 {
+        font-size: 38px !important;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        color: white;
+        border-radius: 5px;  /* Bordas arredondadas */
+        transition: background-color 0.3s ease, border-color 0.3s ease;  /* Transição suave para fundo e borda */
+        
+        /* Efeito 3D mais suave */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 
+                     -2px -2px 5px rgba(0, 0, 0, 0.3);
+        
+        transform: perspective(300px);  /* Removendo a rotação para um efeito 3D mais suave */
+    }
+    
+    
+    
+
+    main > p {
+        font-size: 24px;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    #btnConhecer {
+        display: block;      /* Torna o botão um elemento de bloco */
+        width: 70%;          /* Largura do botão */
+        margin: 20px auto;   /* Centraliza horizontalmente e dá uma margem superior e inferior */
+    }
+    
+    #segundasecao {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #secaoimagem, #secao_cards {
+        width: 100%;
+    }
+
+    #secaoimagem > img {
+        width: 70%;
+        display: none;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #terceira_secao h2{
+        font-size: 1.8em;
+
+    }
+    
+    #terceira_secao h3{
+        font-size: 1.2em;
+
+    }
+    #terceira_secao p {
+        font-size: 1.0em;
+        font-weight: bold;
+    }
+    
+
+    #secao_contato {
+        justify-content: center;  /* Centraliza horizontalmente */
+        align-items: center;      /* Centraliza verticalmente */
+        height: 130vh;            /* Define a altura da seção para preencher a tela */
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    
+    #formulario {
+        margin: 0;                /* Remove margens extras */
+        width: 85%;               /* Define a largura do formulário */
+        max-width: 600px;         /* Define um limite máximo de largura */
+        height: 100vh;
+        margin-top: -80%;
+    }
+    #secao_img{
+        display: none;
+    }
+    
+    
+    #btnContatoOrcamento {
+        width: 100%;
+    }
+    #secao_time{
+        height: 100%;
+    }
+
+    #time {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+        justify-items: center; /* Centraliza os cards dentro da grid */
+        align-items: center; /* Alinha os cards verticalmente no centro */
+        gap: 20px; /* Espaçamento entre os cards */
+        padding: 20px; /* Espaçamento interno */
+        width: 100%; /* Ocupa 100% da largura disponível */
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    }
+    
+    .pessoa_time {
+        width: 68%; /* Largura do card ajustada para 70% */
+        padding: 20px; /* Maior espaçamento interno para um visual mais arejado */
+        border: 1px solid #e0e0e0; /* Borda suave e profissional */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        border-radius: 12px; /* Bordas mais arredondadas para um visual moderno */
+        background-color: #fff; /* Fundo branco para destacar o conteúdo */
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+        overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do card */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais sutil para dar profundidade */
+        max-width: 350px; /* Limita o tamanho máximo do card */
+        margin: 0 auto; /* Centraliza o card na grid */
+    }
+    .pessoa_time:hover {
+        transform: translateY(-8px); /* Eleva o card ao passar o mouse */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+        background-color: #f7f7f7; /* Mudança de cor do fundo para indicar interação */
+    }
+    .pessoa_time img {
+        width: 90%
+    }
+    
+
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    main > p {
+        font-size: 20px;
+    }
+
+    #secaoimagem > img {
+        width: 90%;
+    }
+
+    #secao_contato {
+        grid-template-columns: 1fr; /* Coloca os elementos em uma coluna */
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
