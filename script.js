@@ -51,3 +51,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
      var lon = e.latlng.lng.toFixed(5);
      alert("Você clicou no mapa em " + lat + ", " + lon);
  });
+
+ document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const docRef = await addDoc(collection(db, "contacts"), {
+      testField: "testValue"
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+});
