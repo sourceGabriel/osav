@@ -3,11 +3,11 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 
 const firebaseConfig = {
     apiKey: "AIzaSyCN4NTkzyYP8jWBfLkyU7TflApK5LkK4lM",
-    authDomain: "osav-4627a.firebaseapp.com",
-    projectId: "osav-4627a",
-    storageBucket: "osav-4627a.firebasestorage.app",
-    messagingSenderId: "226108002244",
-    appId: "1:226108002244:web:18d771417de997c9769e91"
+    authDomain: "osav-8708b.firebaseapp.com",
+    projectId: "osav-8708b",
+    storageBucket: "osav-8708b.firebasestorage.app",
+    messagingSenderId: "509208105221",
+    appId: "1:509208105221:web:18d771417de997c9769e91"
 };
 
 const app = initializeApp(firebaseConfig);
