@@ -6,12 +6,14 @@
     <title>OSAV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivo.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    
 
-    
+
+
 
 
 
@@ -21,7 +23,7 @@
         <header>
 
             <img src="images/logoosav-removebg-preview.png" alt="">
-    
+
         <ul>
             <a href="#secaoprincipal">
                 <li>Início</li>
@@ -37,11 +39,11 @@
             </a>
         </ul>
 
-    </header> 
+    </header>
 
         <h1> OSAV - Conectando Negócios ao Mundo Digital</h1>
         <br>
-      <!--  <p>A OSAV (Open Sites for All Vendas) é a sua parceira ideal 
+      <!--  <p>A OSAV (Open Sites for All Vendas) é a sua parceira ideal
             para transformar a presença digital do seu negócio</p> -->
 
             <input type="button" value="CONHECER" id="btnConhecer">
@@ -78,7 +80,7 @@
                 <p>Oferecemos suporte contínuo e manutenção para garantir que seu site esteja sempre em funcionamento.</p>
             </div>
         </div>
-        
+
 
 
     </div>
@@ -141,30 +143,30 @@
         <div class="container">
             <h2>Benefícios dos Nossos Projetos</h2>
             <p>Descubra como os projetos desenvolvidos pela nossa equipe podem transformar o seu negócio, oferecendo soluções inovadoras e eficazes.</p>
-            
+
             <div class="benefit-cards">
                 <div class="benefit-item">
                     <div class="icon"><img src="images/eficiencia_icone.png" alt="Eficiência"></div>
                     <h3>Maior Eficiência</h3>
                     <p>Aumente a produtividade da sua equipe com ferramentas mais eficientes e processos otimizados.</p>
                 </div>
-                
+
                 <div class="benefit-item">
                     <div class="icon"><img src="images/crescimento_icone.png" alt="Crescimento"></div>
                     <h3>Crescimento Acelerado</h3>
                     <p>Impulsione o crescimento da sua empresa com soluções que aumentam a performance e a competitividade.</p>
                 </div>
-                
+
                 <div class="benefit-item">
                     <div class="icon"><img src="images/experienciadocliente_icone.png" alt="Experiência do Cliente"></div>
                     <h3>Melhoria da Experiência do Cliente</h3>
                     <p>Proporcione uma experiência mais agradável e eficiente para os seus clientes, aumentando a fidelização.</p>
                 </div>
-                
+
             </div>
         </div>
     </section>
-    
+
 
 
 
@@ -175,16 +177,16 @@
 
             <h2>Entre em Contato</h2>
             <p>Tem alguma dúvida ou quer discutir um projeto? <br> Estamos aqui para ajudar!</p>
-        
-            <form action="/enviar-contato" method="POST">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="text" name="modelodesite" placeholder="Modelo de Site (Institucional/E-commerce/Blog...)" required>
-                <input type="text" name="area_atuacao" placeholder="Área de Atuação" required>
-                <input type="tel" name="telefone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
-                <input type="text" name="prazodeentrega" placeholder="Prazo de Entrega Estimada">
-                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-                <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+
+            <form>
+              <input type="text" name="nome" placeholder="Seu nome" required>
+              <input type="email" name="email" placeholder="Seu e-mail" required>
+              <input type="text" name="modelodesite" placeholder="Modelo de Site (Institucional/E-commerce/Blog...)" required>
+              <input type="text" name="area_atuacao" placeholder="Área de Atuação" required>
+              <input type="tel" name="telefone" placeholder="Telefone" pattern="^\s*(\d{2}|\d{0})[-. ]?(\d{5}|\d{4})[-. ]?(\d{4})[-. ]?\s*$" required>
+              <input type="text" name="prazodeentrega" placeholder="Prazo de Entrega Estimada">
+              <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+              <button type="submit" id="btnEnviar">Enviar Mensagem</button>
             </form>
 
         </div>
@@ -195,8 +197,8 @@
     </div>
 
 
-    
-    
+
+
     <div id="secao_time">
         <h2>Conheça nosso time!</h2>
         <div id="time">
@@ -262,7 +264,7 @@
             <h2>OSAV</h2>
             <p>Open SItes For All Vendas</p>
           </div>
-        
+
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -275,6 +277,6 @@
           </div>
         </div>
       </footer>
-      
+
 </body>
 </html>

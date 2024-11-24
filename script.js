@@ -1,4 +1,33 @@
- // Cria o mapa com coordenadas iniciais e zoom
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCN4NTkzyYP8jWBfLkyU7TflApK5LkK4lM",
+    authDomain: "osav-4627a.firebaseapp.com",
+    projectId: "osav-4627a",
+    storageBucket: "osav-4627a.firebasestorage.app",
+    messagingSenderId: "226108002244",
+    appId: "1:226108002244:web:18d771417de997c9769e91"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    await addDoc(collection(db, "contacts"), data);
+    alert('Mensagem enviada com sucesso!');
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    alert('Erro ao enviar mensagem.');
+  }
+});
+
+// Cria o mapa com coordenadas iniciais e zoom
  var mapa = L.map('mapa').setView([-23.550520, -46.646732], 13); // Latitude e longitude de São Paulo
 
  // Adiciona o mapa de tiles do OpenStreetMap
